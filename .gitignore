@@ -1,5 +1,6 @@
 build/
 build-*/
+build.log
 *.user
 .cache/
 compile_commands.json
