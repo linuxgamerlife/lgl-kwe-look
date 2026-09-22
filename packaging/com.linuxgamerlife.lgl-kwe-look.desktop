@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=LGL KWE Look
+GenericName=Appearance Settings
+Comment=GTK, Qt5 and Qt6 appearance for KineticWE
+Exec=lgl-kwe-look
+Icon=com.linuxgamerlife.lgl-kwe-look
+Terminal=false
+StartupNotify=true
+StartupWMClass=lgl-kwe-look
+Categories=Settings;DesktopSettings;Qt;GTK;
+Keywords=theme;appearance;icons;cursor;font;gtk;qt;qt5ct;qt6ct;nwg-look;kineticwe;
