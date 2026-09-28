@@ -12,6 +12,7 @@
 #include <QSet>
 #include <QSettings>
 #include <QStyleFactory>
+#include <QtVersion>
 
 namespace QtCt {
 
@@ -220,7 +221,9 @@ bool loadKdeScheme(const QString &path, Scheme *out)
     a[QPalette::LinkVisited] = pick("View", "ForegroundVisited", text);
     a[QPalette::ToolTipBase] = toolTipBase;
     a[QPalette::ToolTipText] = pick("Tooltip", "ForegroundNormal", text);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     a[QPalette::Accent] = pick("View", "DecorationFocus", highlight);
+#endif
     a[QPalette::NoRole] = window;
     a[QPalette::PlaceholderText] = text;
     a[QPalette::PlaceholderText].setAlpha(128);
