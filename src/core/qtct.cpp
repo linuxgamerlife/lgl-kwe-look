@@ -12,7 +12,7 @@
 #include <QSet>
 #include <QSettings>
 #include <QStyleFactory>
-#include <QtVersion>
+#include <qglobal.h>
 
 namespace QtCt {
 
