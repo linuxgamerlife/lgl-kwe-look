@@ -206,7 +206,13 @@ bool loadKdeScheme(const QString &path, Scheme *out)
     const QColor highlight = pick("Selection", "BackgroundNormal", base);
     const QColor toolTipBase = pick("Tooltip", "BackgroundNormal", base);
 
-    QList<QColor> a(kQt6Roles);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    const int numRoles = kQt6Roles;
+#else
+    const int numRoles = kQt5Roles;
+#endif
+
+    QList<QColor> a(numRoles);
     a[QPalette::Window] = window;
     a[QPalette::WindowText] = pick("Window", "ForegroundNormal", text);
     a[QPalette::Base] = base;
